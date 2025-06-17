@@ -1,10 +1,10 @@
 
 # Zoe Depth Estimation API
 
-Bu projenin ne yaptığı ve kimin için olduğu hakkında kısa bir açıklama
+A brief description of what this project does and who it's for
 
 
-## Kullanım/Örnekler
+## Usage/Examples
 
 ```bash
 usage: cli.py [-h] input_image output_image
@@ -19,6 +19,10 @@ options:
   -h, --help    show this help message and exit
 
   
+## API Usage
+http://localhost:8001/docs
+http://localhost:8001/predict
+
 ## Installation 
 
 Install depth estimation project with pip
@@ -27,25 +31,20 @@ Install depth estimation project with pip
   pip install -r requirements.txt
 ```
     
-## Ortam Değişkenleri
+## Environment Variables
 
-Bu projeyi çalıştırmak için aşağıdaki ortam değişkenlerini .env dosyanıza eklemeniz gerekecek
-
-`API_KEY`
-
-`ANOTHER_API_KEY`
+`IMG_API_KEY`
 
   
-## Dağıtım
-
-Bu projeyi dağıtmak için çalıştırın
+## Depoloyment
 
 ```bash
-  npm run deploy
+  docker build -t depth_estimation .
+  docker run -d -p 8001:8001 depth_estimation
 ```
 
   
-## Lisans
+## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
